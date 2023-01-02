@@ -1,0 +1,46 @@
+﻿<Page x:Class="programmation_systeme.Session"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:programmation_systeme"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Session">
+
+    <Grid Width="801" Height="420">
+
+        <Border Margin="189,92,189,144" Style="{StaticResource bdrDefault}"/>
+
+
+
+        <Button Content="Oui" HorizontalAlignment="Left" Height="30" Margin="189,291,0,0" VerticalAlignment="Top" Width="125" Click="C1_Click" Style="{StaticResource btnSmall}" MouseEnter="Yes_MouseEnter"/>
+        <Button Content="Non" HorizontalAlignment="Left" Height="30" Margin="338,291,0,0" VerticalAlignment="Top" Width="125" Click="C2_Click" Style="{StaticResource btnSmall}" MouseEnter="No_MouseEnter"/>
+
+        <Border Margin="487,291,188,99" Style="{StaticResource bdrDefault}" Height="30">
+            <ComboBox Loaded="GuessNumber_Loaded" x:Name="GuessNumber" HorizontalAlignment="Center" Width="126"  VerticalAlignment="Top"  SelectionChanged="GuessNumber_SelectionChanged" MouseEnter="GuessNumber_MouseEnter"/>
+        </Border>
+
+        <Border Margin="205,167,205,213"  Style="{StaticResource bdrTop}" MouseEnter="Question_MouseEnter">
+            <TextBlock x:Name="Question"  HorizontalAlignment="Center"  TextWrapping="Wrap" Text="Chargement du quiz..." VerticalAlignment="Center"  Style="{StaticResource tbbDefault}"/>
+        </Border>
+
+        <Border Margin="205,226,205,164" Style="{StaticResource bdrNone}" Height="30" MouseEnter="Chrono_MouseEnter">
+            <TextBlock x:Name="Chrono" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Chargement du quiz..." VerticalAlignment="Top"  Style="{StaticResource tbbDefault}" />
+        </Border>
+
+        <Border Margin="0,0,0,390" Style="{StaticResource bdrBottom}" Height="30">
+            <TextBlock x:Name="SessionName" HorizontalAlignment="Left" Margin="10,0,0,0"  TextWrapping="Wrap" Text="Session en cours" VerticalAlignment="Center" Style="{StaticResource tbbMedium}"/>
+        </Border>
+
+        <Border Margin="0,390,400,0" Height="30" Style="{StaticResource bdrTop}">
+            <TextBlock x:Name="Help" HorizontalAlignment="Left" Margin="10,0,10,0" TextWrapping="Wrap" VerticalAlignment="Center" Style="{StaticResource tbbSmall}"/>
+        </Border>
+
+        <Border Margin="205,113,205,264"  Style="{StaticResource bdrBottom}" MouseEnter="Titre_MouseEnter" >
+            <TextBlock x:Name="Titre"  HorizontalAlignment="Center"  Margin="10,0,10,0" TextWrapping="Wrap" Text="Chargement du quiz..." VerticalAlignment="Top"  Style="{StaticResource tbbBig}"/>
+        </Border>
+
+
+    </Grid>
+</Page>

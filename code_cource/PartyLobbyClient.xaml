@@ -1,0 +1,63 @@
+﻿<Page x:Class="programmation_systeme.PartyLobbyClient"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:programmation_systeme"
+        mc:Ignorable="d"
+        d:DesignHeight="450" d:DesignWidth="800"
+        Title="PartyLobbyClient">
+
+    <Grid Width="801" Height="420">
+
+        <ListView x:Name="listView1" HorizontalAlignment="Left" Height="250" Margin="62,65,0,0" VerticalAlignment="Top" Width="330" MouseEnter="PlayerList_MouseEnter">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Player" DisplayMemberBinding="{Binding a}" Width="300">
+
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Border Margin="0,0,0,390" Height="30" Style="{StaticResource bdrBottom}">
+            <TextBlock HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" Text="Lobby du jeu" VerticalAlignment="Center" Style="{StaticResource tbbMedium}"/>
+        </Border>
+
+        <Border Margin="0,390,400,0" Height="30" Style="{StaticResource bdrTop}">
+            <TextBlock x:Name="Help" HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Style="{StaticResource tbbSmall}"/>
+        </Border>
+
+        <Border Margin="408,65,62,105" Style="{StaticResource bdrDefault}"  Height="250"  Width="330" MouseEnter="Settings_MouseEnter"/>
+
+        <Border Margin="574,126,86,264" Height="30" Style="{StaticResource bdrDefault-}" >
+            <TextBlock x:Name="nf" HorizontalAlignment="Center"  VerticalAlignment="Center"   MouseEnter="NameFile_MouseEnter" Style="{StaticResource tbbMedium}" />
+        </Border>
+        <Border Margin="574,171,86,219"  Height="30" Style="{StaticResource bdrDefault-}" >
+            <TextBlock x:Name="np" HorizontalAlignment="Center" VerticalAlignment="Center"   MouseEnter="PlayerNumber_MouseEnter" Style="{StaticResource tbbDefault}" />
+        </Border>
+        <Border Margin="574,216,86,174" Height="30" Style="{StaticResource bdrDefault-}" Width="140">
+            <TextBlock x:Name="nq" HorizontalAlignment="Center"  VerticalAlignment="Center"   MouseEnter="TurnNumber_MouseEnter" Style="{StaticResource tbbDefault}" />
+        </Border>
+        <Border Margin="574,261,86,129" Height="30" Width="140" Style="{StaticResource bdrDefault-}">
+            <TextBlock x:Name="nq2" HorizontalAlignment="Center"  VerticalAlignment="Center"   MouseEnter="Timer_MouseEnter"  Style="{StaticResource tbbDefault}" />
+        </Border>
+
+        <Label Content="Paramètres de la session" HorizontalAlignment="Left" Margin="486,86,0,0" VerticalAlignment="Top"/>
+        <Label Content="Quiz" HorizontalAlignment="Left" Margin="428,127,0,0" VerticalAlignment="Top" MouseEnter="NameFile_MouseEnter" Width="144"/>
+        <Label Content="Joueur max" HorizontalAlignment="Left" Margin="428,172,0,0" VerticalAlignment="Top" MouseEnter="PlayerNumber_MouseEnter" Width="144"/>
+        <Label Content="Nombre de tours" HorizontalAlignment="Left" Margin="428,217,0,0" VerticalAlignment="Top" MouseEnter="TurnNumber_MouseEnter" Width="144"/>
+        <Label Content="Durée d'un tour" HorizontalAlignment="Left" Margin="428,262,0,0" VerticalAlignment="Top" MouseEnter="Timer_MouseEnter" Width="144"/>
+
+        <Button x:Name="Start" Content="Démarrer" HorizontalAlignment="Left" Margin="598,326,0,0" VerticalAlignment="Top" Width="140" Height="30" MouseEnter="Start_MouseEnter" Style="{StaticResource btnSmall}"/>
+
+        <Button Content="Quitter" HorizontalAlignment="Left" Margin="62,326,0,0" VerticalAlignment="Top" Width="140" Height="30" Click="Cancel_Click" MouseEnter="Cancel_MouseEnter" Style="{StaticResource btnSmall}"/>
+
+
+
+
+
+
+    </Grid>
+
+</Page>

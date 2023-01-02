@@ -1,0 +1,31 @@
+﻿<Page x:Class="programmation_systeme.PartyIni"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:programmation_systeme"
+        mc:Ignorable="d"
+        d:DesignHeight="450" d:DesignWidth="800"
+        Title="PartyIni">
+
+    <Grid Width="801" Height="420">
+        <Border Margin="0,0,0,390" Height="30" Style="{StaticResource bdrBottom}">
+            <TextBlock HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" Text="Partie" VerticalAlignment="Center" Style="{StaticResource tbbMedium}"/>
+        </Border>
+
+        <Border Margin="270,126,271,176" Style="{StaticResource bdrDefault}" Width="260" />
+        <TextBox x:Name="user" HorizontalAlignment="Left" Height="23" Margin="359,149,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" MouseEnter="Nom_MouseEnter"/>
+        <TextBox x:Name="port" HorizontalAlignment="Left" Height="23" Margin="359,194,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" MouseEnter="Port_MouseEnter"/>
+        <Label Content="Nom" HorizontalAlignment="Left" Margin="299,149,0,0" VerticalAlignment="Top" Width="59" MouseEnter="Nom_MouseEnter"/>
+        <Label Content="Port" HorizontalAlignment="Left" Margin="299,194,0,0" VerticalAlignment="Top" Width="60" MouseEnter="Port_MouseEnter"/>
+
+        <Button Content="Retour" HorizontalAlignment="Left" Margin="270,261,0,0" VerticalAlignment="Top" Width="125" Height="30" Click="Return_Click" MouseEnter="Return_MouseEnter" Style="{StaticResource btnSmall}"/>
+        <Button x:Name="Status" HorizontalAlignment="Left" Margin="405,261,0,0" VerticalAlignment="Top" Width="125" Height="30" Click="Next_Click" MouseEnter="Next_MouseEnter" Style="{StaticResource btnSmall}"/>
+
+        <Border Margin="0,390,400,0" Height="30" Style="{StaticResource bdrTop}">
+            <TextBlock x:Name="Help" HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Style="{StaticResource tbbSmall}"/>
+        </Border>
+
+    </Grid>
+
+</Page>
