@@ -49,3 +49,4 @@ Des fonctions async ont été mis en place dans les classes Client et Server afi
 
 Lorsque le client souhaite se mettre à jour, il envoie une requête au serveur et celui-ci lui répond via un système de code comme dans une requête http Get. C'est toujours le client qui initie l'action. Le serveur ne fait que de répondre. Les interactions sont stockées dans les classes Client et Server. Ces dernières interviennent jusqu'à la fin de la session.
 
+Update : rajout d'un dossier "Form" dans le dossier RidMind.exe
